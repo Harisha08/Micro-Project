@@ -1,0 +1,82 @@
+<!-- src/app/app.component.html -->
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Nutrition Tracker</h1>
+    <form #myForm="ngForm" ngNativeValidate>
+      
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="number" class="form-control" name="id" [(ngModel)]="track.id" required />
+        <input type="date" class="form-control" name="date" [(ngModel)]="track.date" required />
+      </div>
+      <div class="form-group">
+        <label for="mealType">Meal Type</label>
+        <select class="form-control" name="mealType" [(ngModel)]="track.mealType">
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snack</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="foodItem">Food Item</label>
+        <input type="text" class="form-control" name="foodItem" [(ngModel)]="track.foodItem" />
+      </div>
+      <div class="form-group">
+        <label for="portionSize">Portion Size</label>
+        <input type="number" class="form-control" name="portionSize" [(ngModel)]="track.portionSize" />
+      </div>
+      <div class="form-group">
+        <label for="calories">Calories</label>
+        <input type="number" class="form-control" name="calories" [(ngModel)]="track.calories" />
+        <span class="form-text text-muted">kcal</span>
+      </div>
+      <div class="form-group">
+        <label for="carbs">Carbs</label>
+        <input type="number" class="form-control" name="carbs" [(ngModel)]="track.carbs" />
+        <span class="form-text text-muted">g</span>
+      </div>
+      <div class="form-group">
+        <label for="protein">Protein</label>
+        <input type="number" class="form-control" name="protein" [(ngModel)]="track.protein" />
+        <span class="form-text text-muted">g</span>
+      </div>
+      <div class="form-group">
+        <label for="fat">Fat</label>
+        <input type="number" class="form-control" name="fat" [(ngModel)]="track.fat" />
+        <span class="form-text text-muted">g</span>
+      </div>
+      <button type="button" class="btn btn-success" (click)="insertNutrition()">Insert</button>
+      <button type="button" class="btn btn-primary" (click)="updateNutrition()">Update</button>
+      <button type="button" class="btn btn-danger" (click)="deleteNutrition()">Delete</button>
+      <button type="button" class="btn btn-warning" (click)="findNutrition()">Find</button>
+      <button type="button" class="btn btn-info" (click)="findAllNutrition()">Find All</button>
+    </form></div>
+    <br><br>
+
+    <h3>{{result}} </h3>
+    <table class="table table-bordered" *ngIf="flag">
+      <tr>
+        <th>Date</th>
+        <th>Meal Type</th>
+        <th>Food Item</th>
+        <th>Portion Size</th>
+        <th>Calories</th>
+        <th>Macronutrients</th>
+      </tr>
+      <tr *ngFor="let track of trackArr">
+        <td>{{track.id}},{{track.date}}</td>
+        <td>{{track.mealType}}</td>
+        <td>{{track.foodItem}}</td>
+        <td>{{track.portionSize}}</td>
+        <td>{{track.calories}}</td>
+        <td>{{track.carbs}}, {{track.protein}}, {{track.fat}}</td>
+      </tr>
+    </table>
+  
+</body>
+</html>

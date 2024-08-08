@@ -1,0 +1,98 @@
+/* Background settings */
+body {
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  
+  
+}
+
+/* Form container settings */
+.container {
+  background: rgba(255, 255, 255, 0.6); /* Increase opacity for better readability */
+  padding: 60px;;
+  border-radius: 70px;
+  margin-top: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 750px;
+  width: 100%;
+}
+
+/* Title settings */
+h1 {
+  text-align: center;
+  color: #f06;
+  font-size: 3em;
+  background:#044907;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Subtitle settings */
+h2 {
+  color:white;
+  font-size: 40;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Label settings */
+label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Input settings */
+input[type="text"], input[type="number"], input[type="date"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8); /* Add background color for better visibility */
+  color: #333;
+}
+
+/* Button settings */
+button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Table settings */
+table {
+  margin-top: 20px;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  margin-left: 700px;
+  background-color: rgb(235, 131, 152,0.9);
+  color: #131010;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #131010;
+
+}
+
+th {
+  background-color: rgba(100, 202, 100, 0.9);
+  font-weight: bold;
+}

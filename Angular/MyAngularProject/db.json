@@ -1,0 +1,16 @@
+{
+  "nutrition": [
+    
+    {
+      "id": 3,
+      "date": "2024-08-06",
+      "mealType": "Dinner",
+      "foodItem": "Fruits",
+      "portionSize": 8,
+      "calories": 8,
+      "carbs": 18,
+      "protein": 28,
+      "fat": 3
+    }
+  ]
+}

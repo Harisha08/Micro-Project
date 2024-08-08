@@ -1,0 +1,22 @@
+body {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+label{
+    font-weight: bold;
+    color: black;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+h3{
+    text-align: center;
+}
+.bg{
+    background-color: rgb(226, 216, 159);
+    opacity: 0.8;
+}
+
